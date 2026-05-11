@@ -43,7 +43,11 @@ const Navbar = () => {
                 <li>
                   <NavLinks href={"/my-profile"}>My Profile</NavLinks>
                 </li>
+                <li>
+                    <button className="btn text-[1.1rem] px-6 rounded-3xl text-white font-bold bg-linear-to-r from-[#fc932c] to-[#fd5c1c]">LogIn</button>
+                </li>
               </ul>
+              
             </div>
           </div>
           <div className="">
@@ -166,6 +170,7 @@ const Navbar = () => {
                 <span className="badge badge-sm indicator-item">0</span>
               </div>
             </button>
+            <button className="btn text-[1.1rem] px-6 rounded-3xl text-white font-bold bg-linear-to-r from-[#fc932c] to-[#fd5c1c]">LogIn</button>
           </div>
         </div>
       </nav>
