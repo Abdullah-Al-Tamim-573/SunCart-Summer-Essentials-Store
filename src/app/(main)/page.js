@@ -1,10 +1,11 @@
-import { Placements } from "@/Components/Ui/Drawer/Drawer";
+import { DrawerPart } from "@/Components/Ui/Drawer/Drawer";
+
 
 
 export default function Home() {
   return (
   <div>
-        <Placements></Placements>
+        
   </div>
   );
 }

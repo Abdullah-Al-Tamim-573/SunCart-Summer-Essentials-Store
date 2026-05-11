@@ -1,19 +1,37 @@
 import {Button, Drawer} from "@heroui/react";
 
-export function Placements() {
+export function DrawerPart() {
   const placements = ["top"];
 
   return (
     <div className="flex flex-wrap gap-4 ">
       {placements.map((placement) => (
         <Drawer className={`pt-10`} key={placement}>
-          <Button variant="secondary">
-            {placement.charAt(0).toUpperCase() + placement.slice(1)}
-          </Button>
+          
+             <Button className=" btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+               
+              >
+                {" "}
+                <path
+                className=" h-10 w-10"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />{" "}
+              </svg>
+            </Button>
+         
           <Drawer.Backdrop>
             <Drawer.Content placement={placement}>
               <Drawer.Dialog>
-                <Drawer.CloseTrigger />
+                {/* <Drawer.CloseTrigger /> */}
                
                 <Drawer.Header>
                   <Drawer.Heading>
