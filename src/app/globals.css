@@ -2,3 +2,9 @@
 @plugin "daisyui";
 @import "@heroui/styles"; 
 
+/* shred text colo */
+
+.primary {
+    color: #0c255c;
+    /* color: ; */
+}

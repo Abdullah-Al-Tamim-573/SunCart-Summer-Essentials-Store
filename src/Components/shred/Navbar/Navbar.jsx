@@ -103,7 +103,7 @@ const Navbar = () => {
             ></Image>
           </div>
           <div className="navbar-center flex">
-            <ul className=" flex gap-15 items-center px-1">
+            <ul className=" flex gap-8 lg:gap-15 items-center px-1">
                 <li>
                   <NavLinks href={"/"}>Home</NavLinks>
                 </li>
