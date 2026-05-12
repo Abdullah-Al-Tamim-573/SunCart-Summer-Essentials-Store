@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "badge": "HOT",
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.ibb.co.com/wFYwQLqY/summer-Img1.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Floral Summer Dress",
+    "brand": "BeachWear",
+    "price": 28,
+    "rating": 4.6,
+    "stock": 15,
+    "badge": "NEW",
+    "description": "Lightweight floral dress designed for hot summer days.",
+    "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c",
+    "category": "Fashion"
+  },
+  {
+    "id": 3,
+    "name": "Hydrating Sunscreen SPF 50",
+    "brand": "CoolSkin",
+    "price": 12,
+    "rating": 4.8,
+    "stock": 20,
+    "badge": "TRENDING",
+    "description": "SPF 50 sunscreen that protects and hydrates your skin.",
+    "image": "https://i.ibb.co.com/7xqPvC9W/spf-50-sunscreen-tube-on-260nw-2610057357.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Summer Straw Hat",
+    "brand": "SunnyStyle",
+    "price": 18,
+    "rating": 4.5,
+    "stock": 12,
+    "badge": "HOT",
+    "description": "Wide-brim straw hat for stylish sun protection.",
+    "image": "https://i.ibb.co.com/bRvcSmTz/images-1.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Portable Water Bottle",
+    "brand": "HydroGo",
+    "price": 20,
+    "rating": 4.9,
+    "stock": 25,
+    "badge": "NEW",
+    "description": "Reusable insulated water bottle to keep drinks cold all day.",
+    "image": "https://i.ibb.co.com/C5pJq6XV/images-2-1.jpg",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 6,
+    "name": "Beach Flip Flops",
+    "brand": "WaveWalk",
+    "price": 14,
+    "rating": 4.4,
+    "stock": 18,
+    "badge": "TRENDING",
+    "description": "Comfortable flip flops perfect for beach vacations.",
+    "image": "https://i.ibb.co.com/YBq11GGc/last-1-1.jpg",
+    "category": "Footwear"
+  }
+]

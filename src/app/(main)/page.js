@@ -1,4 +1,6 @@
 import Banner from "@/Components/shred/Banner/Banner";
+import PopularSummerProducts from "@/Components/shred/Popular Products/PopularSummerProducts";
+
 import TrustFeatures from "@/Components/shred/Trust Features/TrustFeatures";
 // import { DrawerPart } from "@/Components/Ui/Drawer/Drawer";
 
@@ -6,10 +8,14 @@ import TrustFeatures from "@/Components/shred/Trust Features/TrustFeatures";
 
 export default function Home() {
   return (
-  <div>
-        <Banner></Banner>
+    <div>
+      <Banner></Banner>
+      <div>
+
+        <TrustFeatures></TrustFeatures>
+        <PopularSummerProducts></PopularSummerProducts>
         
-       <TrustFeatures></TrustFeatures>
-  </div>
+      </div>
+    </div>
   );
 }
