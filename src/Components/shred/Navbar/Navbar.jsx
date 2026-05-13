@@ -1,9 +1,24 @@
+'use client'
+
 import { DrawerPart } from "@/Components/Ui/Drawer/Drawer";
 import NavLinks from "@/Components/Ui/NavLinks/NavLinks";
+import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+ 
+  const { data: session } = authClient.useSession();
+  console.log(session?.user)
+
+  let handleSignOut = async() => {
+    await authClient.signOut();
+    toast.success('user signout successfully')
+  }
+
+  
+
   return (
     <>
       {/* small device nav */}
@@ -141,12 +156,26 @@ const Navbar = () => {
                 <span className="badge badge-sm indicator-item">0</span>
               </div>
             </button>
-            <Link
+            
+             {session?.user? 
+                 <button
+                 onClick={handleSignOut}
+              className="btn text-[1.1rem] px-6 rounded-3xl text-white font-bold bg-[red]"
+              
+            >
+             LogOut
+            </button>
+             : 
+
+             <Link
               className="btn text-[1.1rem] px-6 rounded-3xl text-white font-bold bg-linear-to-r from-[#fc932c] to-[#fd5c1c]"
               href={"/register"}
             >
               Register
             </Link>
+                
+            
+            }
           </div>
         </div>
       </nav>
