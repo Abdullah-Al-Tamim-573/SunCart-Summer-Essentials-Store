@@ -74,6 +74,11 @@ const Footer = () => {
                 </li>
                 <li>
                   <a rel="noopener noreferrer" href="#">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
                     FAQ
                   </a>
                 </li>
