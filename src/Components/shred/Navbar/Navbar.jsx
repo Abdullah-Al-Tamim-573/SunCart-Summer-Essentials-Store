@@ -1,8 +1,7 @@
-
-
 import { DrawerPart } from "@/Components/Ui/Drawer/Drawer";
 import NavLinks from "@/Components/Ui/NavLinks/NavLinks";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -47,10 +46,14 @@ const Navbar = () => {
                   <NavLinks href={"/my-profile"}>My Profile</NavLinks>
                 </li>
                 <li>
-                    <button className="btn text-[1.1rem] px-6 rounded-3xl text-white font-bold bg-linear-to-r from-[#fc932c] to-[#fd5c1c]">LogIn</button>
+                  <Link
+                    className="btn text-[1.1rem] px-6 rounded-3xl text-white font-bold bg-linear-to-r from-[#fc932c] to-[#fd5c1c]"
+                    href={"/register"}
+                  >
+                    Register
+                  </Link>
                 </li>
               </ul>
-              
             </div>
           </div>
           <div className="">
@@ -62,7 +65,6 @@ const Navbar = () => {
             ></Image>
           </div>
           <div className="navbar-end">
-           
             <DrawerPart></DrawerPart>
 
             <button className="btn btn-circle">
@@ -95,7 +97,7 @@ const Navbar = () => {
         <div className="navbar hidden md:flex max-w-[95%] mx-auto">
           <div className="navbar-start">
             {/* logo */}
-             <Image
+            <Image
               alt="logo"
               width={200}
               height={50}
@@ -104,20 +106,18 @@ const Navbar = () => {
           </div>
           <div className="navbar-center flex">
             <ul className=" flex gap-8 lg:gap-15 items-center px-1">
-                <li>
-                  <NavLinks href={"/"}>Home</NavLinks>
-                </li>
-                <li>
-                  <NavLinks href={"/products"}>Products</NavLinks>
-                </li>
-                <li>
-                  <NavLinks href={"/my-profile"}>My Profile</NavLinks>
-                </li>
-            
+              <li>
+                <NavLinks href={"/"}>Home</NavLinks>
+              </li>
+              <li>
+                <NavLinks href={"/products"}>Products</NavLinks>
+              </li>
+              <li>
+                <NavLinks href={"/my-profile"}>My Profile</NavLinks>
+              </li>
             </ul>
           </div>
           <div className="navbar-end gap-3">
-             
             <DrawerPart></DrawerPart>
 
             <button className="btn btn-circle">
@@ -141,7 +141,12 @@ const Navbar = () => {
                 <span className="badge badge-sm indicator-item">0</span>
               </div>
             </button>
-            <button className="btn text-[1.1rem] px-6 rounded-3xl text-white font-bold bg-linear-to-r from-[#fc932c] to-[#fd5c1c]">LogIn</button>
+            <Link
+              className="btn text-[1.1rem] px-6 rounded-3xl text-white font-bold bg-linear-to-r from-[#fc932c] to-[#fd5c1c]"
+              href={"/register"}
+            >
+              Register
+            </Link>
           </div>
         </div>
       </nav>
