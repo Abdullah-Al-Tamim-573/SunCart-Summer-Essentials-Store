@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import { LuShoppingCart } from "react-icons/lu";
 
@@ -41,7 +42,9 @@ const Product = ({ productData }) => {
              </div>
           </div>
           <div className="grid grid-cols-4 my-2 items-center gap-5">
-            <button className="btn col-span-3  btn-primary">View Details</button>
+            <Link className="col-span-3 btn btn-primary" href={`/popular-product-details/${id}`}>
+                  <button>View Details</button>
+            </Link>
             <LuShoppingCart className="col-span-1 " size={30}/>
 
           </div>

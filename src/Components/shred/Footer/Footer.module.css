@@ -1,0 +1,7 @@
+/* * {
+    color: white;
+} */
+
+.footerTextWhite * {
+    color: white !important;
+}
