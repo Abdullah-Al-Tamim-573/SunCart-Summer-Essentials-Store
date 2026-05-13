@@ -6,7 +6,7 @@ const SummerCareTipsBoxes = () => {
   return (
     <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-0 justify-items-center lg:grid-cols-3">
         {/* 1st box */}
-      <div className="card border flex items-center justify-center w-96 bg-base-100 card-md shadow-sm">
+      <div className="card  flex items-center justify-center w-96 bg-base-100 card-md shadow-sm">
         <div className="flex  items-center ">
             <div>
                  <Image alt="bottle" width={300} height={100} src={'/Images/summer care tips image/bottle2.png'}></Image>
@@ -22,7 +22,7 @@ const SummerCareTipsBoxes = () => {
         </div>
       </div>
         {/* 2nd box */}
-       <div className="card flex items-center justify-center border w-96 bg-base-100 card-md shadow-sm">
+       <div className="card flex items-center justify-center  w-96 bg-base-100 card-md shadow-sm">
         <div className="flex gap-3 items-center ">
             <div >
                  <Image  alt="bottle" width={250} height={100} src={'/Images/summer care tips image/sunscreen2.png'}></Image>
@@ -38,7 +38,7 @@ const SummerCareTipsBoxes = () => {
         </div>
       </div>
         {/* 3rd box */}
-     <div className="card border flex items-center justify-center w-96 bg-base-100 card-md shadow-sm">
+     <div className="card  flex items-center justify-center w-96 bg-base-100 card-md shadow-sm">
         <div className="flex gap-3 items-center ">
             <div>
                  <Image alt="bottle" width={150} height={100} src={'/Images/summer care tips image/sunGlass2.png'}></Image>
