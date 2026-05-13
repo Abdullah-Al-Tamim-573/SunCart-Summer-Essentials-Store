@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 import { Check } from "@gravity-ui/icons";
 import {
@@ -11,9 +12,16 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+// import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 
-export default function Basic() {
+
+export default function RegisterPage() {
+
+    let router = useRouter();
+
+
   const {
     register,
     handleSubmit,
@@ -29,15 +37,21 @@ export default function Basic() {
       password, 
       name, 
       image: photoUrl,
-    });
-    console.log(data, 'data');
-    console.log(error, 'error');
+    },  { onSuccess: (ctx) => {
+            router.push('/')
+        },
+        onError: (ctx) => {
+            // display the error message
+            alert(ctx.error.message);
+        }
+  })
+   
   };
 
   return (
     <Form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex w-96 flex-col gap-4 space-y-5 my-10 border p-10 rounded-xl mx-auto"
+      className="flex w-80 md:w-96 flex-col gap-4 space-y-5 my-10 border p-10 rounded-xl mx-auto"
     >
       {/* name */}
       <TextField isRequired name="name" type="text">
@@ -105,6 +119,9 @@ export default function Basic() {
         <Button type="reset" variant="secondary">
           Reset
         </Button>
+      </div>
+      <div >
+           Already have an account? <Link className="text-[blue]" href={'logIn'}>Login</Link>
       </div>
     </Form>
   );
