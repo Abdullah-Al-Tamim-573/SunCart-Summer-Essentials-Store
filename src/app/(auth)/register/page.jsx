@@ -15,6 +15,7 @@ import {
 // import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 
 export default function RegisterPage() {
@@ -38,11 +39,14 @@ export default function RegisterPage() {
       name, 
       image: photoUrl,
     },  { onSuccess: (ctx) => {
-            router.push('/')
+            router.push('/logIn')
+            toast.success( 'You SuccessFully SignUp' );
+            
         },
         onError: (ctx) => {
-            // display the error message
-            alert(ctx.error.message);
+            
+            
+            toast.error(ctx.error.message)
         }
   })
    
@@ -51,8 +55,9 @@ export default function RegisterPage() {
   return (
     <Form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex w-80 md:w-96 flex-col gap-4 space-y-5 my-10 border p-10 rounded-xl mx-auto"
+      className="flex w-[90%] md:w-150 flex-col gap-4 space-y-5 my-10 border p-10 rounded-xl mx-auto"
     >
+      <h2 className="text-3xl font-bold text-center">Create a new Account</h2>
       {/* name */}
       <TextField isRequired name="name" type="text">
         <Label>Name</Label>

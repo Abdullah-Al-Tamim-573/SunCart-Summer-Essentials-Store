@@ -13,6 +13,7 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 const LogInPage = () => {
   const {
@@ -34,16 +35,22 @@ const LogInPage = () => {
       callbackURL: "/"
     })
 
-    console.log(data, 'data');
-    console.log(error, 'error')
+    if(data) {
+      toast.success(data.user.name, "loged in successfully")
+    }
+    else if(error) {
+      toast.error(error.message)
+    }
   };
 
   return (
     <div>
       <Form
         onSubmit={handleSubmit(onClick)}
-        className="flex w-80 md:w-96 flex-col gap-4 space-y-5 my-10 border p-10 rounded-xl mx-auto"
+        className="flex w-[90%] md:w-130 flex-col gap-4 space-y-5 my-10 border p-10 rounded-xl mx-auto"
       >
+
+        <h2 className="text-3xl font-bold text-center">Log In Your Account</h2>
         {/* email  */}
         <TextField
           isRequired
@@ -89,15 +96,13 @@ const LogInPage = () => {
 
         <div className="flex gap-2">
           <Button
-            className={"w-full bg-linear-to-r from-[#fc932c] to-[#fd5c1c]"}
+            className={"w-full btn btn-primary bg-linear-to-r from-[#fc932c] to-[#fd5c1c]"}
             type="submit"
           >
             <Check />
             Log In
           </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
+          
         </div>
         <div className="relative -top-3">
           Don't have an account?{" "}
