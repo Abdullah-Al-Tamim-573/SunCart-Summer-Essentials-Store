@@ -6,7 +6,7 @@ import { LuShoppingCart } from "react-icons/lu";
 
 
 const Product = ({ productData }) => {
-  console.log(productData, "productData");
+  
   let { id, name, brand, price, rating, badge, image, stock, category } = productData;
   return (
     <>

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 
@@ -11,23 +11,20 @@ import { FcLike } from "react-icons/fc";
 import { useState } from "react";
 
 const PopularProductDetails = ({ product }) => {
+  let [quantity, setQuantity] = useState(1);
 
-    let [quantity, setQuantity] = useState(1)
-    
+  let handlePlusQuantity = () => {
+    setQuantity(quantity + 1);
+  };
 
-    let handlePlusQuantity = () => {
-        setQuantity(quantity++)
+  let handleMinusQuantity = () => {
+    if (quantity < 1) {
+      setQuantity(1);
+    } else {
+      setQuantity(quantity - 1);
     }
+  };
 
-    let handleMinusQuantity = () => {
-        if(quantity === 0) {
-            setQuantity(1)
-        }
-        else {
-            setQuantity(quantity--)
-        }
-    }
-  
   let {
     id,
     badge,
@@ -39,23 +36,18 @@ const PopularProductDetails = ({ product }) => {
     price,
     rating,
     stock,
-    reviews
+    reviews,
   } = product;
   return (
     <>
       <div className="hero bg-base-200 my-20">
         <div className="hero-content flex-col lg:flex-row items-start gap-10 flex-col lg:flex-row">
-          <Image
-            width={600}
-            height={800}
-            alt={name}
-            src={image}
-          ></Image>
+          <Image width={600} height={800} alt={name} src={image}></Image>
           <div className="flex flex-col gap-5">
             <span className="px-5 w-fit rounded-[13px] py-1 text-white font-bold bg-linear-to-r from-[#fc932c] to-[#fd5c1c]">
-               {badge}
+              {badge}
             </span>
-            <h2 className="text-3xl font-bold">UV Protection Sunglasses</h2>
+            <h2 className="text-3xl font-bold">{name}</h2>
             <div className="flex justify-between items-center">
               <div>
                 <span className="text-[1rem]">Brand: </span>
@@ -79,14 +71,15 @@ const PopularProductDetails = ({ product }) => {
             <div>
               <span className="text-[green] text-[18px] font-bold flex gap-1 items-center">
                 <FaCheckCircle />
-                In Stock <span className="text-[17px] text-black font-medium">({stock} available)</span>
+                In Stock{" "}
+                <span className="text-[17px] text-black font-medium">
+                  ({stock} available)
+                </span>
                 {/* <span className="text-2xl">In Stock </span>   */}
               </span>
             </div>
             <hr />
-            <div className="text-[1rem] font-medium">
-              {description}
-            </div>
+            <div className="text-[1rem] font-medium">{description}</div>
 
             <div>
               <p className="text-[18px] font-bold">Quantity</p>
@@ -97,7 +90,7 @@ const PopularProductDetails = ({ product }) => {
                   <FaPlus size={12} />
                 </button>
                 <span className="text-[1.3rem]">{quantity}</span>
-                <button onClick={handleMinusQuantity} className="btn ">
+                <button onClick={handleMinusQuantity} className="btn">
                   <FaMinus />
                 </button>
               </div>
