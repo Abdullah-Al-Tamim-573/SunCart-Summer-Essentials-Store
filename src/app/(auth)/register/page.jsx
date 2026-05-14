@@ -49,6 +49,13 @@ export default function RegisterPage() {
     );
   };
 
+
+  let handleSignIn = async() => {
+      const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  }
+
   return (
     <Form
       onSubmit={handleSubmit(onSubmit)}
@@ -56,6 +63,7 @@ export default function RegisterPage() {
     >
       <h2 className="text-3xl font-bold text-center">Create a new Account</h2>
       <button
+      onClick={handleSignIn}
         aria-label="Login with Google"
         type="button"
         className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600"
