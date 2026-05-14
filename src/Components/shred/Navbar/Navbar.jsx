@@ -10,11 +10,11 @@ import { toast } from "react-toastify";
 const Navbar = () => {
  
   const { data: session } = authClient.useSession();
-  console.log(session?.user)
+  
 
   let handleSignOut = async() => {
     await authClient.signOut();
-    toast.success('user signout successfully')
+    toast.success('user signout successfully');
   }
 
   

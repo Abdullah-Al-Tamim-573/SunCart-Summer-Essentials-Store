@@ -9,7 +9,8 @@
     "badge": "HOT",
     "description": "Stylish UV protection sunglasses perfect for summer outings.",
     "image": "https://i.ibb.co.com/wFYwQLqY/summer-Img1.png",
-    "category": "Accessories"
+    "category": "Accessories",
+    "reviews": 124
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "badge": "NEW",
     "description": "Lightweight floral dress designed for hot summer days.",
     "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c",
-    "category": "Fashion"
+    "category": "Fashion",
+    "reviews": 98
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "badge": "TRENDING",
     "description": "SPF 50 sunscreen that protects and hydrates your skin.",
     "image": "https://i.ibb.co.com/7xqPvC9W/spf-50-sunscreen-tube-on-260nw-2610057357.png",
-    "category": "Skincare"
+    "category": "Skincare",
+    "reviews": 210
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "badge": "HOT",
     "description": "Wide-brim straw hat for stylish sun protection.",
     "image": "https://i.ibb.co.com/bRvcSmTz/images-1.jpg",
-    "category": "Accessories"
+    "category": "Accessories",
+    "reviews": 76
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "badge": "NEW",
     "description": "Reusable insulated water bottle to keep drinks cold all day.",
     "image": "https://i.ibb.co.com/C5pJq6XV/images-2-1.jpg",
-    "category": "Lifestyle"
+    "category": "Lifestyle",
+    "reviews": 185
   },
   {
     "id": 6,
@@ -69,6 +74,7 @@
     "badge": "TRENDING",
     "description": "Comfortable flip flops perfect for beach vacations.",
     "image": "https://i.ibb.co.com/YBq11GGc/last-1-1.jpg",
-    "category": "Footwear"
+    "category": "Footwear",
+    "reviews": 89
   }
 ]

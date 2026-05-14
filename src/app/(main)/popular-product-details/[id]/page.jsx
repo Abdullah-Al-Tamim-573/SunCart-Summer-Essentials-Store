@@ -1,15 +1,24 @@
-import { fetchPopularProducts } from '@/Fetch Apis/FetchApis';
-import React from 'react';
+import { fetchPopularProducts } from "@/Fetch Apis/FetchApis";
 
-const ProductDetails = async({params}) => {
-    let {id} = await params;
-    let SummerProductsData = fetchPopularProducts();
+import PopularProductDetails from "@/Components/shred/Popular Products/Product Details/PopularProductDetails";
+
+
+
+const ProductDetails = async ({ params }) => {
+  let { id } = await params;
+  let SummerProductsData = fetchPopularProducts();
+//   console.log(typeof id, 'params id')
+
+  let filterPopularProduct = SummerProductsData.filter(product => product.id === Number(id) )
+
+  return (
+    <div>
+        {
+            filterPopularProduct.map(product => <PopularProductDetails key={product.id} product={product}></PopularProductDetails>)
+        }
      
-    return (
-        <div>
-              i am product details
-        </div>
-    );
+    </div>
+  );
 };
 
 export default ProductDetails;
