@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 
 import { FaStar } from "react-icons/fa";
@@ -6,9 +8,26 @@ import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { FcLike } from "react-icons/fc";
+import { useState } from "react";
 
 const PopularProductDetails = ({ product }) => {
-  console.log(product);
+
+    let [quantity, setQuantity] = useState(1)
+    
+
+    let handlePlusQuantity = () => {
+        setQuantity(quantity++)
+    }
+
+    let handleMinusQuantity = () => {
+        if(quantity === 0) {
+            setQuantity(1)
+        }
+        else {
+            setQuantity(quantity--)
+        }
+    }
+  
   let {
     id,
     badge,
@@ -74,11 +93,11 @@ const PopularProductDetails = ({ product }) => {
             </div>
             <div className="flex gap-4 items-center">
               <div className="flex gap-1 items-center">
-                <button className="btn ">
+                <button onClick={handlePlusQuantity} className="btn ">
                   <FaPlus size={12} />
                 </button>
-                <span className="text-[1.3rem]">1</span>
-                <button className="btn ">
+                <span className="text-[1.3rem]">{quantity}</span>
+                <button onClick={handleMinusQuantity} className="btn ">
                   <FaMinus />
                 </button>
               </div>
